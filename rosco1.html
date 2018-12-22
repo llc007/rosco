@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,600,900">
+    <title>Pasapalabra</title>
+</head>
+<body>
+	<section class="game">
+		<div class="circle-container">
+			<div class="title-container">
+				<p class="title">ROSCO</p>
+			</div>
+		    <ul class="circle">
+		        <li class="item">A</li>
+		        <li class="item">B</li>
+		        <li class="item">C</li>
+		        <li class="item">D</li>
+		        <li class="item">E</li>
+		        <li class="item">F</li>
+		        <li class="item">G</li>
+		        <li class="item">H</li>
+		        <li class="item">I</li>
+		        <li class="item">J</li>
+		        <li class="item">L</li>
+		        <li class="item">M</li>
+		        <li class="item">N</li>
+				<li class="item">Ñ</li>
+		        <li class="item">O</li>
+		        <li class="item">P</li>
+		        <li class="item">Q</li>
+		        <li class="item">R</li>
+		        <li class="item">S</li>
+		        <li class="item">T</li>
+		        <li class="item">U</li>
+		        <li class="item">V</li>
+		        <li class="item">X</li>
+		        <li class="item">Y</li>
+		        <li class="item">Z</li>
+		    </ul>
+			<ul class="scoreboard">
+				<li id="js--timer" class="timer" href="">900</li>
+				<li id="js--score" class="score" href="">25</li>				
+				<a href="index.html">MENU</a>
+			</ul>
+		</div>
+		<div class="controls-container">
+			<i id="js--close" class="icon-close hidden"></i>
+			<div id="js--ng-controls" class="ng-controls">
+				<h4>Bienvenidos al juego Pasapalabra de la iglesia El Olivar!</h4>
+				<p>Basado en el exitoso concurso Pasapalabra de Chilevision, las normas son muy sencillas:</p>
+				<p>Se mostraran unas definiciones por pantalla y el concursante deberá responder con la palabra a la que corresponden. El concursante tiene la opción de decir Pasapalabra y dejar esa definición para mas adelante.</p>
+				<a id="js--new-game" class="btn"><i class="icon-play"></i>Jugar</a>
+			</div>
+			<div id="js--question-controls" class="question-controls hidden">
+				<span id="js--hint" class="hint"></span>
+				<p id="js--definition" class="definition"></p>
+
+				<input id="js--user-answer" hidden type="text" placeholder="Introduce tu respuesta">
+
+				<a id="js--send" class="btn btn--green" href="#">Enviar</a>
+				
+
+				<a id="js--correcto" class="btn btn--green" href="#">Correcto</a>
+				<a id="js--error" class="btn btn--green" href="#">Error</a>
+				<a id="js--pasapalabra" class="btn" href="#">Pasapalabra</a>
+			</div>
+			<div id="js--pa-controls" class="pa-controls hidden">
+				<p id="js--end-title" class="title"></p>
+				<p id="js--end-subtitle" class="subtitle"></p>
+				<a id="js--pa" class="btn" href=""><i class="icon-loop"></i>Jugar de nuevo</a>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<p>Made with <i class="icon-heart"></i></p>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/app1.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'rotate-in-sm',
+    outClass: 'rotate-out-sm',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+</script>
+</body>
+</html>
